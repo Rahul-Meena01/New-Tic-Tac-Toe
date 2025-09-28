@@ -2,7 +2,11 @@
 
 A modern twist on the classic Tic Tac Toe game with disappearing moves and timed rounds. Built with pure HTML, CSS, and JavaScript.
 
+## 🎮 [**PLAY THE GAME LIVE**](https://rahul-meena01.github.io/New-Tic-Tac-Toe/) 🎮
+
 ![Game Screenshot](image.png)
+
+> 👆 **Click the screenshot or the link above to play the live game!**
 
 ## 🚀 Features
 
@@ -86,6 +90,10 @@ project/
 
 ## 🚀 Getting Started
 
+### Option 1: Play Online (Recommended)
+🎮 **[Play Live Demo](https://rahul-meena01.github.io/New-Tic-Tac-Toe/)** - No installation required!
+
+### Option 2: Run Locally
 1. **Clone the repository**
    ```bash
    git clone https://github.com/Rahul-Meena01/New-Tic-Tac-Toe.git
