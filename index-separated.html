@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disappearing Tic Tac Toe</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="card">
+        <h1>🎯 Disappearing Tic Tac Toe</h1>
+
+        <div class="game-info">
+            <div class="current-player" id="currentPlayerDisplay">Player X's Turn</div>
+            <div class="round-timer" id="roundTimer">1:00</div>
+            <div class="scoreboard" id="scoreboard">X: 0 | O: 0 | Draws: 0</div>
+        </div>
+
+        <div class="board" id="board"></div>
+
+        <div class="controls">
+            <select id="mode" onchange="setMode()">
+                <option value="normal">Normal Mode (5s fade)</option>
+                <option value="rapid">Rapid Mode (3s fade)</option>
+                <option value="blitz">Blitz Mode (2s fade)</option>
+            </select>
+            <button class="btn" onclick="toggleAbout()">ℹ️ About</button>
+        </div>
+    </div>
+
+    <!-- About Modal -->
+    <div class="modal" id="aboutModal">
+        <div class="modal-content">
+            <img src="https://i.pinimg.com/736x/c4/ea/8b/c4ea8bf28dd46e81339c825ff8248533.jpg" alt="Avatar"
+                class="about-avatar">
+            <h2 class="about-title">Rahul</h2>
+            <p class="about-subtitle">Full Stack Developer</p>
+            <p class="about-text">
+                Built with ❤️ to reimagine the classic Tic Tac Toe.
+                This twist introduces disappearing moves, turning simple strategy into fast-paced, time-based chaos.
+                Pure client-side magic, no servers, just fun!
+            </p>
+
+            <div class="game-rules">
+                <h3>🎮 Game Rules</h3>
+                <ul>
+                    <li>Take turns placing X and O on the board</li>
+                    <li>After placing a mark, it will start fading after a few seconds</li>
+                    <li>Marks completely disappear and the cell becomes available again</li>
+                    <li>Win by getting 3 in a row before your marks disappear</li>
+                    <li>Each round lasts 1 minute - game auto-restarts if time runs out</li>
+                    <li>Choose different modes for faster or slower gameplay</li>
+                </ul>
+            </div>
+
+            <div class="socials">
+                <a href="https://instagram.com/why______dude" target="_blank" title="Instagram"><i
+                        class="ri-instagram-line"></i></a>
+                <a href="https://github.com/Rahul-Meena01" target="_blank" title="GitHub"><i
+                        class="ri-github-fill"></i></a>
+                <a href="https://linkedin.com/in/rahul-meena-m3401" target="_blank" title="LinkedIn"><i
+                        class="ri-linkedin-fill"></i></a>
+            </div>
+
+            <div class="shortcuts">
+                <h4>⌨️ Keyboard Shortcuts</h4>
+                <p><span>Toggle Mode:</span> <kbd>M</kbd></p>
+                <p><span>Close Modal:</span> <kbd>Esc</kbd></p>
+                <p><span>Show Rules:</span> <kbd>H</kbd></p>
+            </div>
+
+            <p class="footer-note">v2.0.0 · Enhanced with disappearing mechanics & 1-minute rounds · Fully responsive ·
+                Built with HTML, CSS & JS</p>
+            <button class="btn primary" onclick="toggleAbout()">Got it!</button>
+        </div>
+    </div>
+
+    <!-- Winner Modal -->
+    <div class="modal" id="winModal">
+        <div class="modal-content">
+            <h2 id="winMessage"></h2>
+            <p id="winSubtext"></p>
+            <div class="controls">
+                <button class="btn primary" onclick="resetGame()">🎮 Play Again</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
