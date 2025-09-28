@@ -2,7 +2,7 @@
 
 A modern twist on the classic Tic Tac Toe game with disappearing moves and timed rounds. Built with pure HTML, CSS, and JavaScript.
 
-![Game Screenshot](screenshot.png)
+![Game Screenshot](image.png)
 
 ## 🚀 Features
 
